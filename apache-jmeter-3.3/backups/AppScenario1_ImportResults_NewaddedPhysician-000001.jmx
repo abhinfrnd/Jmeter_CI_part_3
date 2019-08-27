@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.3 r1808647">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1541163557000</longProp>
+        <longProp name="ThreadGroup.end_time">1541163557000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="QA Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="apiserver" elementType="Argument">
+              <stringProp name="Argument.name">apiserver</stringProp>
+              <stringProp name="Argument.value">qa.api.ursafe.io</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="token" elementType="Argument">
+              <stringProp name="Argument.name">token</stringProp>
+              <stringProp name="Argument.value">eyJhbGciOiJSUzI1NiIsImtpZCI6IjYyZGI3NTE5YmZlZTVlYjU3MmU2NjYyNjI4M2JhOGQzIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NDQ0Mjg0NzUsImV4cCI6MTU0NzAyMDQ3NSwiaXNzIjoiaHR0cHM6Ly9xYS5zZWN1cml0eS51cnNhZmUuaW8iLCJhdWQiOlsiaHR0cHM6Ly9xYS5zZWN1cml0eS51cnNhZmUuaW8vcmVzb3VyY2VzIiwiZml2ZXJfYXV0aF9hcGkiXSwiY2xpZW50X2lkIjoiZml2ZXJfYXV0aF9jbGllbnQiLCJzdWIiOiI1YzM4YzA2MC05OTJhLTRmYWUtOTE0NS1hYTQxODFjYmMyYjMiLCJhdXRoX3RpbWUiOjE1NDQ0Mjg0NzUsImlkcCI6ImxvY2FsIiwibmFtZSI6InJlZmVyZW5jZV9zdXBlcmFkbWluQHNhZmVhcHAubWUiLCJlbWFpbCI6InJlZmVyZW5jZV9zdXBlcmFkbWluQHNhZmVhcHAubWUiLCJyb2xlIjoiU3VwZXJBZG1pbiIsImVtYWlsX3ZlcmlmaWVkIjoiVHJ1ZSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJmaXZlcl9hdXRoX2FwaSJdLCJhbXIiOlsicHdkIl19.xWw3P_wgmBK6UvcIV8oYN_gE_8xWmBrRrf4PX4aYeIXiz2dp9x3-JuhBHYksIEk8WrFYYy1-7eS6B38I0Z9LPJUKAtDcyInoClN7TDhpuG1t5Svhddnk9JkuzEMcl1MoYrVLWn7LzwKVM4bi4ShOKQr7iClbnOC-2MLt2a4KdPFRuuRGRH1GhL5KnMDTeyeHMk-yWLBRoGOy3phID8pJUSBAMPV4Dk7LSSP0OpCNKjWOm4ZBbp6tk8S_lJU_AtRH4wMWlG-q7bF1OvBjiNDteqvL8H4QM8C6Tv1tXcga-XMxc-ic0peT05yI3TYQPbYj_sCZq0x_6XUBK_CwQ8gEcw</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Prod Variables" enabled="false">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="api_server" elementType="Argument">
+              <stringProp name="Argument.name">api_server</stringProp>
+              <stringProp name="Argument.value">safe-api-app.azurewebsites.net</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="token" elementType="Argument">
+              <stringProp name="Argument.name">token</stringProp>
+              <stringProp name="Argument.value">eyJhbGciOiJSUzI1NiIsImtpZCI6IjYyZGI3NTE5YmZlZTVlYjU3MmU2NjYyNjI4M2JhOGQzIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NDQ0Mjg0NzUsImV4cCI6MTU0NzAyMDQ3NSwiaXNzIjoiaHR0cHM6Ly9xYS5zZWN1cml0eS51cnNhZmUuaW8iLCJhdWQiOlsiaHR0cHM6Ly9xYS5zZWN1cml0eS51cnNhZmUuaW8vcmVzb3VyY2VzIiwiZml2ZXJfYXV0aF9hcGkiXSwiY2xpZW50X2lkIjoiZml2ZXJfYXV0aF9jbGllbnQiLCJzdWIiOiI1YzM4YzA2MC05OTJhLTRmYWUtOTE0NS1hYTQxODFjYmMyYjMiLCJhdXRoX3RpbWUiOjE1NDQ0Mjg0NzUsImlkcCI6ImxvY2FsIiwibmFtZSI6InJlZmVyZW5jZV9zdXBlcmFkbWluQHNhZmVhcHAubWUiLCJlbWFpbCI6InJlZmVyZW5jZV9zdXBlcmFkbWluQHNhZmVhcHAubWUiLCJyb2xlIjoiU3VwZXJBZG1pbiIsImVtYWlsX3ZlcmlmaWVkIjoiVHJ1ZSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJmaXZlcl9hdXRoX2FwaSJdLCJhbXIiOlsicHdkIl19.xWw3P_wgmBK6UvcIV8oYN_gE_8xWmBrRrf4PX4aYeIXiz2dp9x3-JuhBHYksIEk8WrFYYy1-7eS6B38I0Z9LPJUKAtDcyInoClN7TDhpuG1t5Svhddnk9JkuzEMcl1MoYrVLWn7LzwKVM4bi4ShOKQr7iClbnOC-2MLt2a4KdPFRuuRGRH1GhL5KnMDTeyeHMk-yWLBRoGOy3phID8pJUSBAMPV4Dk7LSSP0OpCNKjWOm4ZBbp6tk8S_lJU_AtRH4wMWlG-q7bF1OvBjiNDteqvL8H4QM8C6Tv1tXcga-XMxc-ic0peT05yI3TYQPbYj_sCZq0x_6XUBK_CwQ8gEcw</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">Bearer ${token}</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+          <collectionProp name="AuthManager.auth_list">
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://safe-api-app.azurewebsites.net/api/Message/getMessages?PageNumber=0&amp;PageSize=10</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://safe-api-app.azurewebsites.net/api/document/1</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://safe-api-app.azurewebsites.net/api//v2/Message/UnreadCount</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://safe-api-app.azurewebsites.net/api/state</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://safe-api-app.azurewebsites.net/api/physician/search</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://safe-api-app.azurewebsites.net/api/v2/UnverifiedProvider/add</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://safe-api-app.azurewebsites.net/api/member/VerifyIdentityFlo</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://safe-api-app.azurewebsites.net/api/Account/mobile/addDeviceToken</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://centralpush.servicebus.windows.net/testpush/registrationids/?api-version=2013-04</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://safe-api-app.azurewebsites.net/api/member/update</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://safe-api-app.azurewebsites.net/api/importrequests/create</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url">https://safe-api-app.azurewebsites.net/api/results/getEhrLatest/</stringProp>
+              <stringProp name="Authorization.username">${AUTH_LOGIN}</stringProp>
+              <stringProp name="Authorization.password">${AUTH_PASSWORD}</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+              <stringProp name="Authorization.mechanism">KERBEROS</stringProp>
+            </elementProp>
+          </collectionProp>
+        </AuthManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="711 /api/Message/getMessages" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="PageNumber" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">PageNumber</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="PageSize" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">PageSize</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/Message/getMessages</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="716 /api/Message/getMessages" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="PageNumber" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">PageNumber</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="PageSize" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">PageSize</stringProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/Message/getMessages</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="717 /api/document/1" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/document/1</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="715 /api//v2/Message/UnreadCount" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api//v2/Message/UnreadCount</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="721 /api/state" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/state</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="722 /api/physician/search" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;PageSize&quot;:10,&quot;State&quot;:&quot;AL&quot;,&quot;Term&quot;:&quot;&quot;,&quot;PageNumber&quot;:0}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/physician/search</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="724 /api/v2/UnverifiedProvider/add" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;phone&quot;:&quot;4849188657&quot;,&quot;fax&quot;:&quot;&quot;,&quot;firstName&quot;:&quot;Danny&quot;,&quot;street&quot;:&quot;&quot;,&quot;city&quot;:&quot;New York&quot;,&quot;email&quot;:&quot;doza@yopmail.com&quot;,&quot;zip&quot;:&quot;55555&quot;,&quot;type&quot;:2,&quot;state&quot;:&quot;AL&quot;,&quot;lastName&quot;:&quot;Doza&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/v2/UnverifiedProvider/add</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="unverified_physician_id" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">unverified_physician_id</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;id&quot;:(.+?),</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">NOTFOUND</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="725 /api/member/VerifyIdentityFlo" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;state&quot;:&quot;CA&quot;,&quot;city&quot;:&quot;Los Angeles&quot;,&quot;phoneNumber&quot;:&quot;4849188657&quot;,&quot;ssn&quot;:&quot;555555555&quot;,&quot;zip&quot;:&quot;90036&quot;,&quot;customerReference&quot;:&quot;771386&quot;,&quot;lastName&quot;:&quot;Weiniger&quot;,&quot;street&quot;:&quot;1234 Placeholder Street&quot;,&quot;firstName&quot;:&quot;Lauren&quot;,&quot;dateOfBirth&quot;:&quot;1983-07-14T00:00:00&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/member/VerifyIdentityFlo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="726 /api/Account/mobile/addDeviceToken" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;isLoggedIn&quot;:true,&quot;deviceType&quot;:&quot;iOS&quot;,&quot;deviceToken&quot;:&quot;4D7B740F5A6341DB2D6704693893B0212D721C45E033681491D0F26AD3AA6E3C&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/api/Account/mobile/addDeviceToken</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="728 /testpush/registrationids/?api-version=2013-04" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">centralpush.servicebus.windows.net</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/testpush/registrationids/?api-version=2013-04</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/xml</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">NOTIFICATIONHUBS/2013-04(api-origin=IosSdk; os=iOS; os_version=12.0;)</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="727 /api/member/update" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;apnTokenString&quot;:&quot;4D7B740F5A6341DB2D6704693893B0212D721C45E033681491D0F26AD3AA6E3C&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/member/update</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="729 /api/importrequests/create" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;providerId&quot;:&quot;${unverified_physician_id}&quot;,&quot;signature&quot;:&quot;iVBORw0KGgoAAAANSUhEUgAAAWcAAABuCAYAAAD7wNLxAAAAAXNSR0IArs4c6QAA\r\nABxpRE9UAAAAAgAAAAAAAAA3AAAAKAAAADcAAAA3AAACsfVsSMwAAAJ9SURBVHgB\r\n7NuxK4RxHMfxSzIadJPBZDFTrDYjA1n8BTb8AzYjyy1Wm1hsFpTNYPM\/WCQMlPD5\r\nlavnrueS1HOp16\/edc85\/c5Lfft119NqWQQIECBAgAABAgQIECBAgAABAgQIECBA\r\ngAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAAB\r\nAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQI\r\nECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBA\r\ngAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAAB\r\nAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQI\r\nEPjvAmP5A5ZSJ72mz5o+8txTukknaT9tpdU0nybTSLIIECBA4A8CE\/ndjXScnlPd\r\nQK4+V4Zz9bru8WNeM5MsAgQIEPiFwHReW067l+k9VQfsba5302yqW+VUXE7HC6mc\r\nlrdTOT2fpnKavk8PyXAOgkWAAIGfBFbygsN0l6rD+C3X52kzTSWLAAECBBoQmMse\r\nZ6k6kMvJ9iitpfFkESBAgEBDAv1DuXzBd5UW02hD78E2BAgQIPAt0D+UX\/L8XmoT\r\nIkCAAIHmBQzl5s3tSIAAgYEChvJAGj8gQIBA8wLL2fIidb\/o8\/FF8\/8DOxIgQKBH\r\nYD1X3ZtBDOUeGhcECBAYjsBOtu0O5us8bg\/nbdiVAAECBIpAuTPvIJWPMcpwLnf4\r\nWQQI9Al8AQAA\/\/\/Mgjx7AAAG6klEQVTtnWuoVFUYhs2MrmqKBd2UsAsSIhJmf4oI\r\nEwoKoosZZRfMsLKSQirLym4a0Q3K6keFSVFERREGBUl2p4yCSgrrZGpoiZXdS+t5\r\ncTZnmMaDHs9xzfE8HzzuNXv27PXt58c3y7XX7NOnj6GB7WdgN7p6Fv6FP+BMMDSg\r\nAQ1ooKCBwfS9GFKY18GxYGhAAxrQQEEDw+j7c0hhXg5HgKEBDWhAAwUNjKbvVZDC\r\n\/DHsD4YGNKABDRQ0MJ6+f4YU5tdgABga0IAGNFDQwHn0\/RekMC+AXcDQgAY0oIGC\r\nBmbSd4pymAM7gaEBDWhAAwUNZPoiRXkDXFIwD7vWgAY0oIGagXPZpjBvhMtq+9xo\r\nQAMa0EBBA2Po+3dIcZ5SMA+71oAGNKCBmoH92K6EFOYHavvcaEADGtBAQQO70vc7\r\nkMK8CFyVgQRDAxrQQGkDj5FACnMbDAFDAxrQgAYKG7iS\/lOYf4FRhXOxew1oQAMa\r\nwMA4+AeyMuN0MDSgAQ1ooLCB4fS\/FjJqnl04F7vXgAY0oIGagfVsU5hfAH\/9V5Pi\r\nRgMa0EBJAwfReQpznpvRv2Qi9q0BDWhAA+0GTqaZ4vxq+y5bGtCABjRQ2sAsEkhx\r\nvrN0IvavAQ1oQAPtBp6nmeI8sX2XLQ1oQAMaKG2gjQRSnEeUTsT+NaABDWhgk4FB\r\nbFKYf4W+m3b5rwY0oAENlDYwiQRSnNtKJ2L\/GtCABjTQbuBUmtXIeY\/23bY0oAEN\r\naKC0geoJdBeVTsT+NaABDWig3UBWaWT0\/En7Llsa0IAGNFDaQJ7XvApSoCdDP9ia\r\nyI3ECXAVXABTYTpcCzfDXLgPHoYn4UtYWHt9D9vb4XrI5\/M3Cs+Hm2AoGBrQgAZ6\r\ntYHHuPoU55A\/TfUePAgXQh4d2liw92Rf5qsfhTVQfbYrt3ls6XgwNKABDfRaAxml\r\nLoXlsBEai2wK9hJYBJn++BPqj\/me13k\/xTpF\/W7IiHgWzIDLYQpMgtm19sVs8\/zo\r\n6+AWuAvy2QWwGnL+5HI\/7AaGBjSggV5tYCBXfxxcDa\/AD5AiWV+Mq8L5B\/u\/g88g\r\no+3XIL84nA\/524N3QIrvNJgKmb4YCbtDR9GXN6+BPIwpfX0Ko8HQgAY00KsNjODq\r\nM61QX5B\/43VGze9CRsrNCnb98R2189kV8Do8AhldZ5qksXCnIKfw51wp1CnYKdyG\r\nBjSggV5n4ByuuCrMGRnPgxNhV6iPnXmRUfaBkGI+FsZBiuwkuBRSTG+DTE28DG3w\r\nBTROi9QX8hTuD2FfSGRKI5+vvgxW0T4YDA1oQAO9wkCKYFZUVIUyUxO58dcdkcKe\r\nAnsCZIVG5qhfgq+gKsJraWf1RxXjaVRfGhlNd1duVX9uNaABDRQ3MJwMPoIU5tz8\r\nmwylYhgdL4TqSyLTH\/mDAInDYCXkvRyTZYCGBjSggR3SwGlc1U+Qgpcph1HQCnE2\r\nSeSLInnNqkvoENqra\/ufYLtT3Xs2NaABDfR4Axl13gvVCPUZ2gNa7Kqy8iP5ndGQ\r\n15G8Xl97L0vwDA1oQAM7hIGhXEVWXaTw5ebcNGjFyBdGs+KcXHPzsbqxeFV2GBrQ\r\ngAZ6soGpJF9NF7TRHtPCF9NRcU7aZ0FuIIasMjE0oAEN9EgD\/cj6R8ho9G0YBK0c\r\nm5vWqM\/5Cl7kev6BtA0NaEADPc7AFDJOIfsGspytleN4kvsVkm\/9DcFmOT9VOy7\/\r\nIzig2QHu04AGNNCqBrKO+VtIsWu8wdZKOedG5VzIVEVyXQXVUjqaTSMrNqo59EW0\r\n\/RVhU03u1IAGWtHAdJJKsVsCrbr8LOuYP6jl+TfbjJi3dIS\/D8emkG\/JSJvDDA1o\r\nQAPlDeTXdNXa4JPKp9M0g8nsraYxltE+uulRHe\/MVMgGyPzzMR0f6rsa0IAGyhuY\r\nSQoZUb5VPpX\/ZTCYPc9B8gv52Xh\/6Gzcygdznkzh7N3Zk\/g5DWhAA91tIAVqHaRg\r\nHQetFBnproDkllUkE2FbIytS3oScM+c3NKABDbSkgYfIKoXq1RbKrvGm32JyG9aF\r\n+Q3kXBbmLhTqqTSgga43kDnYFOexXX\/qTp3xcD6VR4Imp9z0uwG29KYfhxoa0IAG\r\ndgwDKYKhdBxMAvOhWiK3jHZnbvqVvg7714AGNNAlBkoX56O4iqchKyiqXN6nvS03\r\n\/fi4oQENaKBnG6gK4va8iqyjPgXegKr\/PKTocRgJhgY0oIFeb6AqjttDRH6FmJ+I\r\nL4Wq36wUmQP7g6EBDWhAAzUDVZHsTiFDOPmNsAaq\/r6mnQcR7QWGBjSgAQ00GKiK\r\nZcPuLnmZn1vPg9+g6ifzyRPAFRhIMDSgAQ1szkBWR4RDN3fAVuzP+uQxMAPaoFp5\r\nke2LcCwYGtBAEwP\/ARiQ2VSajVvFAAAAAElFTkSuQmCC&quot;,&quot;kbastatus&quot;:1,&quot;type&quot;:&quot;2&quot;,&quot;state&quot;:&quot;AL&quot;,&quot;IsNewProvider&quot;:true}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/importrequests/create</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="730 /api/results/getEhrLatest/" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiserver}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/results/getEhrLatest/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-us</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">br, gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">SAFE/1.5.7 CFNetwork/974.2.1 Darwin/18.0.0</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>false</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>false</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>true</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="WorkBench" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

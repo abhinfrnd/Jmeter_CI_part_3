@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.3 r1808647">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1531141461000</longProp>
+        <longProp name="ThreadGroup.end_time">1531141461000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WebSocket Sampler" enabled="false">
+          <stringProp name="serverAddress">tamm-staging-standalone.topfan.com</stringProp>
+          <stringProp name="serverPort">80</stringProp>
+          <stringProp name="implementation">RFC6455 (v13)</stringProp>
+          <stringProp name="protocol">ws</stringProp>
+          <stringProp name="contextPath">/websocket?device_type=android&amp;device_id=jeff&amp;type=socket&amp;community_id=c8a9c23d832fb3326f4b0fec&amp;device_version=9999&amp;group_uuid=29d2762681fc92ac0dff7bde</stringProp>
+          <stringProp name="contentEncoding">UTF-8</stringProp>
+          <stringProp name="requestPayload"></stringProp>
+          <stringProp name="connectionTimeout">5000</stringProp>
+          <stringProp name="responseTimeout">20000</stringProp>
+          <boolProp name="ignoreSslErrors">false</boolProp>
+          <boolProp name="streamingConnection">true</boolProp>
+          <stringProp name="connectionId"></stringProp>
+          <stringProp name="responsePattern"></stringProp>
+          <stringProp name="closeConncectionPattern"></stringProp>
+          <stringProp name="proxyAddress"></stringProp>
+          <stringProp name="proxyPassword"></stringProp>
+          <stringProp name="proxyPort"></stringProp>
+          <stringProp name="proxyUsername"></stringProp>
+          <stringProp name="messageBacklog">3</stringProp>
+          <elementProp name="queryStringParameters" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
+        <hashTree/>
+        <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WebSocket Sampler" enabled="true">
+          <stringProp name="serverAddress">tamm-staging-standalone.topfan.com</stringProp>
+          <stringProp name="serverPort">80</stringProp>
+          <stringProp name="implementation">RFC6455 (v13)</stringProp>
+          <stringProp name="protocol">ws</stringProp>
+          <stringProp name="contextPath">/websocket?device_type=</stringProp>
+          <stringProp name="contentEncoding">UTF-8</stringProp>
+          <stringProp name="requestPayload"></stringProp>
+          <stringProp name="connectionTimeout">5000</stringProp>
+          <stringProp name="responseTimeout">20000</stringProp>
+          <boolProp name="ignoreSslErrors">false</boolProp>
+          <boolProp name="streamingConnection">true</boolProp>
+          <stringProp name="connectionId"></stringProp>
+          <stringProp name="responsePattern"></stringProp>
+          <stringProp name="closeConncectionPattern"></stringProp>
+          <stringProp name="proxyAddress"></stringProp>
+          <stringProp name="proxyPassword"></stringProp>
+          <stringProp name="proxyPort"></stringProp>
+          <stringProp name="proxyUsername"></stringProp>
+          <stringProp name="messageBacklog">3</stringProp>
+          <elementProp name="queryStringParameters" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="android_id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">jeff</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">android_id</stringProp>
+              </elementProp>
+              <elementProp name="device_id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">jeff</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">device_id</stringProp>
+              </elementProp>
+              <elementProp name="type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">socket</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">type</stringProp>
+              </elementProp>
+              <elementProp name="community_id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">c8a9c23d832fb3326f4b0fec</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">community_id</stringProp>
+              </elementProp>
+              <elementProp name="device_version" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">9999</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">device_version</stringProp>
+              </elementProp>
+              <elementProp name="group_uuid" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">29d2762681fc92ac0dff7bde</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">group_uuid</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="WorkBench" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>
